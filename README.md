@@ -35,7 +35,7 @@ python ./tools/mergevec.py -v samples/ -o samples.vec
 完成上面的步骤后，你的文件目录应该有如下文件：
 
 ![image]
-(http://github.com/dj140/opencv-haar-classifier-training/raw/master/images/file.png)
+(https://github.com/dj140/opencv-haar-classifier-training/raw/master/images/file.png)
 
 
 
