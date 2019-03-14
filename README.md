@@ -8,6 +8,8 @@ git clone https://github.com/dj140/opencv-haar-classifier-training.git
 
 
 2.解压picture.tar文件，把里面的600张负面图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
+ 
+ 
  find ./negative_images -iname "*.jpg" > negatives.txt
 
 
@@ -28,6 +30,9 @@ perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
 5.上一条指令执行结束后，会在samples文件加上生成一些带.vec后缀的文件，再执行下面的指令，用mergevec.py程序把文件夹下的所有.vec文件和为一体，输出samples.vec文件
 
 python ./tools/mergevec.py -v samples/ -o samples.vec
+
+
+完成上面的步骤后，你的文件目录应该有如下文件：
 
 
 
