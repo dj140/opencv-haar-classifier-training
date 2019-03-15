@@ -28,8 +28,8 @@ ubuntu下有一个指令可以批量修改图像的大小：
 5.执行下列指令，将正面图片和负面图片混合以此生成一大堆带有负面图片背景的正面图片样本。生成的样本数量为1500，大小为25x25.
 
 		perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
-   		"opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
-   		-maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 25 -h 25"
+   		  "opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
+   		  -maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 25 -h 25"
 
 
 
@@ -48,9 +48,9 @@ ubuntu下有一个指令可以批量修改图像的大小：
 7.利用opencv进行训练级联分类器，正面样本1000张，负面样本600张，（一般正面样本不要取全，负面样本取正面样本数量的一半）bufsize根据自己电脑的内存选择
 
 		opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
-   		-numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-   		-numNeg 600 -w 25 -h 25 -mode ALL -precalcValBufSize 1024\
-   		-precalcIdxBufSize 1024
+   		  -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
+   		  -numNeg 600 -w 25 -h 25 -mode ALL -precalcValBufSize 1024\
+   		  -precalcIdxBufSize 1024
    
    
 
@@ -60,9 +60,9 @@ ubuntu下有一个指令可以批量修改图像的大小：
 8.opencv自带的另一种训练模型,速度要比前面一个快很多，准确度可能会差一点点，建议使用这个
 
 		opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
-   		-numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-   		-numNeg 600 -w 25-h 25 -mode ALL -precalcValBufSize 1024\
-   		-precalcIdxBufSize 1024 -featureType LBP
+   		  -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
+   		  -numNeg 600 -w 25-h 25 -mode ALL -precalcValBufSize 1024\
+   		  -precalcIdxBufSize 1024 -featureType LBP
 
 
 
@@ -97,11 +97,6 @@ ubuntu下有一个指令可以批量修改图像的大小：
 	END>
 	Training until now has taken 0 days 3 hours 19 minutes 16 seconds.
 	```
-
-
-
----------------------------------
-
-## win10下操作教程
-
-1.
+--------------------------------
+以上步骤都执行完成后，classifier文件夹下会有一些.xml文件，cascade.xml文件即可在opencv中使用<br>
+如果stage没跑到20层，试着把positives样本数量降低。
