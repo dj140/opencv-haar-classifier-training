@@ -1,5 +1,6 @@
 # opencv-haar-classifier-training 
 [本篇文章完全参考Thorsten Ball的博客](http://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html)
+
 [作者github链接](https://github.com/mrnugget/opencv-haar-classifier-training.git)
 ## 如何在ubuntu16.04下训练自己的级联分类器：
 
@@ -66,12 +67,7 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 
 	执行指令后输出如下：
-<<<<<<< HEAD
 	```
-=======
-
-	```c
->>>>>>> e95ca1949c1aa982d91496cb81126d24baf8e0ac
 	===== TRAINING 0-stage =====
 	<BEGIN
 	POS count : consumed   1000 : 1000
