@@ -3,9 +3,11 @@
 ------------------------------------
 ##如何在ubuntu16.04下训练自己的级联分类器：
 
-##1.打开终端输入下面指令下载文件到电脑上
+###1.打开终端输入下面指令下载文件到电脑上
 git clone https://github.com/dj140/opencv-haar-classifier-training.git
+
 压缩图片大小
+
 sudo mogrify -resize 800x600 -format jpg *
 
 2.解压picture.tar文件，把里面的600张负面图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
@@ -35,8 +37,7 @@ python ./tools/mergevec.py -v samples/ -o samples.vec
 
 完成上面的步骤后，你的文件目录应该有如下文件：
 
-![image]
-(https://github.com/dj140/opencv-haar-classifier-training/blob/master/images/file.png)
+![image](https://github.com/dj140/opencv-haar-classifier-training/raw/master/images/file.png)
 
 
 
@@ -52,7 +53,7 @@ opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
 
 
 
-7.嫌慢的可以尝试一下opencv自带的另一种训练模型
+7.opencv自带的另一种训练模型,速度要比前面一个快很多，准确度可能会差一点点，建议使用这个
 opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
    -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
    -numNeg 600 -w 25-h 25 -mode ALL -precalcValBufSize 1024\
