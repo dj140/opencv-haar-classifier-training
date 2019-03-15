@@ -22,6 +22,7 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 
 5.执行下列指令，将正面图片和负面图片混合以此生成一大堆带有负面图片背景的正面图片样本。生成的样本数量为1500，大小为25x25.
+
 		perl bin/createsamples.pl positives.txt negatives.txt samples 1500\
    			"opencv_createsamples -bgcolor 0 -bgthresh 0 -maxxangle 1.1\
    			-maxyangle 1.1 maxzangle 0.5 -maxidev 40 -w 25 -h 25"
@@ -62,6 +63,7 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 
 	执行指令后输出如下：
+
 	```
 	===== TRAINING 0-stage =====
 	<BEGIN
