@@ -10,12 +10,12 @@
 
 
 
-2.解压picture.tar文件，把里面的600张负面图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
+2.解压负面图片.tar文件，把里面的600张负面图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
  
  
 		find ./negative_images -iname "*.jpg" > negatives.txt
 
-3.正面样本需要自己用手机拍摄，剪裁，转化为灰度图，拷贝到positive_images文件夹下
+3.正面样本需要自己用手机拍摄，剪裁，转化为灰度图，拷贝到positive_images文件夹下（已经拍好放在压缩包里了）
 
 ubuntu下有一个指令可以批量修改图像的大小：
 
