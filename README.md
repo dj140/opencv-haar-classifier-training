@@ -66,7 +66,12 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 
 	执行指令后输出如下：
+<<<<<<< HEAD
 	```
+=======
+
+	```c
+>>>>>>> e95ca1949c1aa982d91496cb81126d24baf8e0ac
 	===== TRAINING 0-stage =====
 	<BEGIN
 	POS count : consumed   1000 : 1000
