@@ -1,6 +1,7 @@
 # opencv-haar-classifier-training<br>
-##如何在ubuntu16.04下训练自己的级联分类器：<br>
-###1.打开终端输入下面指令下载文件到电脑上<br>
+## 如何在ubuntu16.04下训练自己的级联分类器：<br>
+1.打开终端输入下面指令下载文件到电脑上<br>
+
 		git clone https://github.com/dj140/opencv-haar-classifier-training.git
 
 压缩图片大小
@@ -56,4 +57,38 @@ sudo mogrify -resize 800x600 -format jpg *
    			-numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
    			-numNeg 600 -w 25-h 25 -mode ALL -precalcValBufSize 1024\
    			-precalcIdxBufSize 1024 -featureType LBP
+
+
+
+	执行指令后输出如下：
+	```
+      ===== TRAINING 0-stage =====
+      <BEGIN
+      POS count : consumed   1000 : 1000
+      NEG count : acceptanceRatio    600 : 1
+      Precalculation time: 11
+      +----+---------+---------+
+      |  N |    HR   |    FA   |
+      +----+---------+---------+
+      |   1|        1|        1|
+      +----+---------+---------+
+      |   2|        1|        1|
+      +----+---------+---------+
+      |   3|        1|        1|
+      +----+---------+---------+
+      |   4|        1|        1|
+      +----+---------+---------+
+      |   5|        1|        1|
+      +----+---------+---------+
+      |   6|        1|        1|
+      +----+---------+---------+
+      |   7|        1| 0.711667|
+      +----+---------+---------+
+      |   8|        1|     0.54|
+      +----+---------+---------+
+      |   9|        1|    0.305|
+      +----+---------+---------+
+      END>
+      Training until now has taken 0 days 3 hours 19 minutes 16 seconds.
+     ```
 
