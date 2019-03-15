@@ -1,11 +1,11 @@
 # opencv-haar-classifier-training
 
 ------------------------------------
-如何在ubuntu16.04下训练自己的级联分类器：
+##如何在ubuntu16.04下训练自己的级联分类器：
 
-1.打开终端输入下面指令下载文件到电脑上
+##1.打开终端输入下面指令下载文件到电脑上
 git clone https://github.com/dj140/opencv-haar-classifier-training.git
-
+压缩图片大小
 sudo mogrify -resize 800x600 -format jpg *
 
 2.解压picture.tar文件，把里面的600张负面图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
