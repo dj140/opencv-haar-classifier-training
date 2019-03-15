@@ -1,6 +1,8 @@
-# opencv-haar-classifier-training <br>
-## 如何在ubuntu16.04下训练自己的级联分类器： <br>
-1.打开终端输入下面指令下载文件到电脑上 <br>
+# opencv-haar-classifier-training 
+<br>
+## 如何在ubuntu16.04下训练自己的级联分类器：
+<br>
+1.打开终端输入下面指令下载文件到电脑上
 
 		git clone https://github.com/dj140/opencv-haar-classifier-training.git
 
