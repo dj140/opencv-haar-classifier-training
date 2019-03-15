@@ -99,4 +99,5 @@ ubuntu下有一个指令可以批量修改图像的大小：
 	```
 --------------------------------
 以上步骤都执行完成后，classifier文件夹下会有一些.xml文件，cascade.xml文件即可在opencv中使用<br>
-如果stage没跑到20层，试着把positives样本数量降低。
+如果stage没跑到20层，试着把positives样本数量降低。<br>
+trained_classifiers文件夹下放了一些我训练好的xml文件，可以直接使用。
