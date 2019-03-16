@@ -4,13 +4,39 @@
 [作者github链接](https://github.com/mrnugget/opencv-haar-classifier-training.git)
 ## 如何在ubuntu16.04下训练自己的级联分类器：
 
+以红绿灯和停止标志的识别为例子
+
+训练级联分类器需要：
+
+大量的正面样本（你需要识别的物体图片，可以是任意图片但必须包含你所需要识别的物体）
+
+大量的负面样本（一定不能包含你想要识别的物体）
+
+收集好所需的图片后，你需要有一个.vec文件包含你图片的大小信息，被识别物体所在的位置。<br>
+有两种方法可以创建文本信息：
+
+		1：手动创建文本，人工标签识别物体的位置
+		2：利用opencv的createsamples功能，把正面样本和负面样本混合，生成大量的正面样本同时文本信息也自动给你生成了 <br>
+		(这里采用第二种方法，理论上第一种方法的准确率要高，但需要耗费大量的人工)
+
+stop_sign_pictures.tar压缩包里包含了25张停止标志的图片
+traffic_light_pictures包含了30张红绿灯的图片
+trained_classifiers文件夹下放了一些训练好的xml文件，可以直接使用。
+
+完成以上工作完成后即可进行训练
+
+--------------------------------------
 1.打开终端输入下面指令下载文件到电脑上
 
+安装git：
+		sudo apt-get install git
+
+clone文件：
 		git clone https://github.com/dj140/opencv-haar-classifier-training.git
 
 
 
-2.解压负面图片.tar文件，把里面的600张负面图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
+2.解压neg_pictures.tar文件，把里面的图片复制到negative_images文件夹下，负面图片的大小要比正面图像大，然后执行下列命令
  
  
 		find ./negative_images -iname "*.jpg" > negatives.txt
@@ -20,6 +46,7 @@
 ubuntu下有一个指令可以批量修改图像的大小：
 
 		sudo mogrify -resize 25x25 -format jpg *
+
 4.将你想要检测的物体拍照，剪裁为特定大小（图像越大训练的时间会大大增长），转换为灰度图，放到positive_images文件夹下，执行下列命令。（已经拍好图片了）
 
 		find ./positive_images -iname "*.jpg" > positives.txt
@@ -57,7 +84,7 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 
 
-8.opencv自带的另一种训练模型,速度要比前面一个快很多，准确度可能会差一点点，建议使用这个
+8.opencv的另一种训练模型LBP,速度要比前面一个快很多，准确度可能会差一点点，建议使用这个
 
 		opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
    		  -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
@@ -100,4 +127,7 @@ ubuntu下有一个指令可以批量修改图像的大小：
 --------------------------------
 以上步骤都执行完成后，classifier文件夹下会有一些.xml文件，cascade.xml文件即可在opencv中使用<br>
 如果stage没跑到20层，试着把positives样本数量降低。<br>
-trained_classifiers文件夹下放了一些我训练好的xml文件，可以直接使用。
+测试准确度如果很差，可以采用第一种方法重新训练一遍
+
+
+
