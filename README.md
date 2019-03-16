@@ -19,9 +19,9 @@
 		2：利用opencv的createsamples功能，把正面样本和负面样本混合，生成大量的正面样本同时文本信息也自动给你生成了 <br>
 		(这里采用第二种方法，理论上第一种方法的准确率要高，但需要耗费大量的人工)
 
-stop_sign_pictures.tar压缩包里包含了25张停止标志的图片
-traffic_light_pictures包含了30张红绿灯的图片
-trained_classifiers文件夹下放了一些训练好的xml文件，可以直接使用。
+stop_sign_pictures.tar压缩包里包含了25张停止标志的图片 <br>
+traffic_light_pictures包含了30张红绿灯的图片 <br>
+trained_classifiers文件夹下放了一些训练好的xml文件，可以直接使用。<br>
 
 完成以上工作完成后即可进行训练
 
