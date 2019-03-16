@@ -129,7 +129,7 @@ ubuntu下有一个指令可以批量修改图像的大小：
 如果stage没跑到20层，试着把positives样本数量降低。<br>
 测试准确度如果很差，可以采用第一种方法重新训练一遍
 
-参考文章链接：
+参考文章链接：<br>
 https://pythonprogramming.net/haar-cascade-object-detection-python-opencv-tutorial/ <br>
 https://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.html <br>
 https://github.com/mrnugget/openchttps://coding-robin.de/2013/07/22/train-your-own-opencv-haar-classifier.htmlv-haar-classifier-training
