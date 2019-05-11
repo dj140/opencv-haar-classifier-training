@@ -74,10 +74,11 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 7.利用opencv进行训练级联分类器，正面样本1000张，负面样本600张，（一般正面样本不要取全，负面样本取正面样本数量的一半）bufsize根据自己电脑的内存选择
 
-		opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
-   		  -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-   		  -numNeg 600 -w 25 -h 25 -mode ALL -precalcValBufSize 1024\
-   		  -precalcIdxBufSize 1024
+	opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
+	-numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
+	-numNeg 600 -w 80 -h 40 -mode ALL -precalcValBufSize 1024\
+	-precalcIdxBufSize 1024
+
    
    
 
