@@ -87,10 +87,10 @@ ubuntu下有一个指令可以批量修改图像的大小：
 
 8.opencv的另一种训练模型LBP,速度要比前面一个快很多，准确度可能会差一点点，建议使用这个
 
-		opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
-   		  -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
-   		  -numNeg 600 -w 25-h 25 -mode ALL -precalcValBufSize 1024\
-   		  -precalcIdxBufSize 1024 -featureType LBP
+	opencv_traincascade -data classifier -vec samples.vec -bg negatives.txt\
+   	    -numStages 20 -minHitRate 0.999 -maxFalseAlarmRate 0.5 -numPos 1000\
+   	    -numNeg 600 -w 25-h 25 -mode ALL -precalcValBufSize 1024\
+   	    -precalcIdxBufSize 1024 -featureType LBP
 
 
 
